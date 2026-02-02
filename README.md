@@ -1,4 +1,1 @@
-Challenges completed : 
-
-Level 1 (Beginner): Challenges 1–5. 
-// Level 2 (Intermediate): Challenges 6–12. 
+Challenges completed :  Challenges 1–6
