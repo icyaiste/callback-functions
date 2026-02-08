@@ -14,8 +14,8 @@ const handleSignIn = async (): Promise<void> => {
         console.log(message);
         //fetchAfterSignIn();
     } catch (error) {
-        if(error instanceof Error) {
-            console.error(error.message);
+        if(error) {
+            console.error("An error occurred:", error);
         }
     }
 };
