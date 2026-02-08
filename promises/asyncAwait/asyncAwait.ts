@@ -12,7 +12,7 @@ const handleSignIn = async (): Promise<void> => {
     try {
         const message = await passwordLength;
         console.log(message);
-        //fetchAfterSignIn();
+        await fetchAfterSignIn();
     } catch (error) {
         if(error) {
             console.error("An error occurred:", error);
@@ -20,3 +20,24 @@ const handleSignIn = async (): Promise<void> => {
     }
 };
 handleSignIn();
+
+
+
+type Affirmation = {
+  affirmation: string;
+}
+
+const fetchAfterSignIn = async (): Promise<void> => {
+  try{
+    const response = await fetch("https://www.affirmations.dev/")
+    
+    if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+    
+  const data: Affirmation = await response.json();
+  console.log("Random affirmation of the day:", data.affirmation );
+    } catch(error) {
+        console.error("Error fetching affirmation:", error);
+    }
+}
