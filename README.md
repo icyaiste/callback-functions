@@ -1,1 +1,1 @@
-Promise exercises converted to use async-await
+Promise exercises converted to use async-await (in promise folder)
